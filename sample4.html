@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>時事ニュース発表</title>
+		<style>
+			#addButton{
+				background-color:blue;
+				border:solid;
+		</style>
+	</head>
+
+	<body>
+		<div id="greeting">
+			こんにちは!
+		</div>
+		<button　type="button" id="addButton">
+			追加ボタン
+		</button>
+		<script>
+			const program = () =>{
+				//ここにプログラムの処理内容を記述する。
+				//行の前に//をつけるとその行はプログラムと認識されない。
+
+				const $greeting = document.getElementById("greeting");
+
+
+				const $button = document.getElementById("addButton");
+
+				const name = "名無しの権兵衛";
+
+				$button.addEventListener("click",()=>{
+
+						$greeting.textContent = "こんにちは!" + name;
+					}
+				);
+
+				
+			};
+			document.addEventListener("DOMContentLoaded",program);
+		</script>
+
+	</body>
+</html>
